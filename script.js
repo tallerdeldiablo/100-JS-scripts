@@ -1,7 +1,7 @@
-const folderPath = './scripts';
+const mainFolder = window.location.href.split('/').slice(0, -1).join('/');
 const scriptLinks = document.getElementById('script-links');
 
-fetch(folderPath)
+fetch(mainFolder)
   .then((response) => response.text())
   .then((html) => {
     const parser = new DOMParser();
