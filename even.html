@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Even Numbers</title>
+  </head>
+  <body>
+    <h1>Even Numbers</h1>
+    <p>Below is a list of 20 even numbers:</p>
+    <ul id="evenNumbersList"></ul>
+
+    <script>
+      let evenNumbers = [];
+      for (let i = 1; evenNumbers.length < 20; i++) {
+        if (i % 2 === 0) {
+          evenNumbers.push(i);
+        }
+      }
+
+      const evenNumbersList = document.getElementById('evenNumbersList');
+      for (let i = 0; i < evenNumbers.length; i++) {
+        const listItem = document.createElement('li');
+        listItem.textContent = evenNumbers[i];
+        evenNumbersList.appendChild(listItem);
+      }
+    </script>
+  </body>
+</html>
